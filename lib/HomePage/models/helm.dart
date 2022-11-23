@@ -13,20 +13,20 @@ class Clothes {
   static List <Clothes> generateClothes() {
     return [
       Clothes(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Helmet Shark ',
+          'Helm Full Face',
           79.99,
           'assets/images/helmig.jpg',
           ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
       Clothes(
-          'Locatelli Helmet Full Face',
-          'Sports Helm',
+          'Locatelli Helmet',
+          'Helm  Full Face',
           39.99,
           'assets/images/helmig2.jpg',
           ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
       Clothes(
-          'XR2 Nexx Full Face',
-          'Helm',
+          'XR2 Nexx ',
+          'Helm Full Face',
           39.99,
           'assets/images/agv.jpg',
           ['assets/images/agv.jpg', 'assets/images/agv.jpg']),
