@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:projek_pas/Login/UI/custom_surfix_icon.dart';
 import 'package:projek_pas/Login/UI/sosial_button.dart';
+import 'package:projek_pas/bottom_navigation/bottom_navigation.dart';
 
 class SignUp extends StatelessWidget {
   @override
@@ -104,8 +105,7 @@ class SignUp extends StatelessWidget {
                     primary: Colors.white,
                     backgroundColor: Colors.blue,
                   ),
-
-                  onPressed: () {},
+                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => MaterialYou()));},
                   child: Text(
                     "Continue",
                     style: TextStyle(
