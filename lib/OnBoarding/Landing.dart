@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Login/UI/welcome_screen.dart';
 import 'package:projek_pas/OnBoarding/SliderPage.dart';
 
 
@@ -13,20 +14,20 @@ class _LandingState extends State<Landing> {
 
   List<Widget> _pages = [
     SliderPage(
-        title: "Best Quality",
+        title: "Secure Payment",
         description:
-        "Accept cryptocurrencies and digital assets, keep thern here, or send to orthers",
-        image: ""),
+        "We guarantee the security of all transactions",
+        image: "assets/images/secure-payment.png"),
     SliderPage(
-        title: "Safety Helm",
+        title: "Shipment With Express",
         description:
-        "Buy Bitcoin and cryptocurrencies with VISA and MasterVard right in the App",
-        image: "assets/2.svg"),
+        "The express courier delivers in 3/5 days in europa, in 4/7 days in the rest of the world ",
+        image:'assets/images/free-shipping.png'),
     SliderPage(
-        title: "Fast Delevery",
+        title: "Easy Turn",
         description:
-        "Sell your Bitcoin cryptocurrencies or Change with orthres digital assets or flat money",
-        image: ""),
+        "if you want to return the product, you have 30 days to do it",
+        image: "assets/images/free-return.png"),
   ];
 
   _onchanged(int index) {
@@ -70,7 +71,7 @@ class _LandingState extends State<Landing> {
               InkWell(
                 onTap: () {
                   _currentPage == (_pages.length - 1 )
-                      ?Navigator.pushReplacementNamed(context, '/login')
+                      ?Navigator.push(context, MaterialPageRoute(builder: (context) => WelcomeScreen()))
                       : _controller.nextPage(
                       duration: Duration(milliseconds: 800),
                       curve: Curves.easeInOutQuint);
@@ -90,7 +91,6 @@ class _LandingState extends State<Landing> {
                       color: Colors.white,
                       fontSize: 20,
                     ),
-
                   )
                       : Icon(
                     Icons.navigate_next,
