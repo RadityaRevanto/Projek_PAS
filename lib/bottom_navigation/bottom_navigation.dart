@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/HomePage/home_page.dart';
 
 
 class MaterialYou extends StatefulWidget {
@@ -12,7 +13,7 @@ class _MaterialYouState extends State<MaterialYou> {
 
   int index = 0;
   final screens = [
-    Center(child: Text('Home'),),
+    HomePage(),
     Center(child: Text('Favorite'),),
     Center(child: Text('Keranjang'),),
     Center(child: Text('Profile'),),
