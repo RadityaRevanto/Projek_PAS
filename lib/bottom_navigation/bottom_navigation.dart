@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projek_pas/HomePage/home_page.dart';
+import 'package:projek_pas/Keranjang/keranjang_screen.dart';
 
 
 class MaterialYou extends StatefulWidget {
@@ -15,7 +16,6 @@ class _MaterialYouState extends State<MaterialYou> {
   final screens = [
     HomePage(),
     Center(child: Text('Favorite'),),
-    Center(child: Text('Keranjang'),),
     Center(child: Text('Profile'),),
   ];
   @override
@@ -43,10 +43,6 @@ class _MaterialYouState extends State<MaterialYou> {
           NavigationDestination(
             icon: Icon(Icons.favorite_outline),
             label: 'Favorite',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.shopping_cart_outlined),
-            label: 'Keranjang',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),

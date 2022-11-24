@@ -19,7 +19,7 @@ class Clothes {
           'assets/images/helmig.jpg',
           ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
       Clothes(
-          'Locatelli Helmet',
+          'Locatelli Pro',
           'Helm  Full Face',
           39.99,
           'assets/images/helmig2.jpg',
