@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
+import 'package:projek_pas/bloc/cart_bloc.dart';
 import 'package:projek_pas/bottom_navigation/bottom_navigation.dart';
 
 
@@ -248,8 +250,16 @@ class Detail extends StatelessWidget {
                       ],
                     ),
                     Expanded(
-                          child: MaterialButton(
+                      child: BlocBuilder<CartBloc, CartState>(
+                        builder: (context, state) {
+                          return MaterialButton(
                             onPressed: () {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: Text('Added to your Cart!'),
+                                ),
+                              );
+                              context.read<CartBloc>().add(AddProduct(clothes));
                             },
                             height: 66,
                             shape: RoundedRectangleBorder(
@@ -261,7 +271,12 @@ class Detail extends StatelessWidget {
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20.0),
-                               color: Color.fromARGB(210, 28, 78, 159)
+                                gradient: LinearGradient(
+                                  colors: [
+                                    Color.fromARGB(210, 28, 78, 159),
+                                    Color.fromARGB(210, 28, 78, 159)
+                                  ],
+                                ),
                               ),
                               padding: EdgeInsets.all(10.0),
                               child: Center(
@@ -274,7 +289,9 @@ class Detail extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          )
+                          );
+                        },
+                      ),
                     )
                   ],
                 ),

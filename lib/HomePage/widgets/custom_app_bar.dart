@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Keranjang/keranjang_screen.dart';
 
 
 class CustomAppBar extends StatelessWidget{
@@ -49,8 +50,8 @@ class CustomAppBar extends StatelessWidget{
               ),
               child: IconButton(icon: Icon(Icons.shopping_cart_outlined,color: Colors.grey, ),
                 onPressed: () {
-                //  Navigator.of(context).push(
-                  //    MaterialPageRoute(builder: (context) =>  CartScreen()));
+                 Navigator.of(context).push(
+                   MaterialPageRoute(builder: (context) =>  CartScreen()));
                 },),
             ),
             Positioned(
