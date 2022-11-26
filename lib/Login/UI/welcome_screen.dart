@@ -15,7 +15,7 @@ class WelcomeScreen extends StatelessWidget {
           Expanded(
             child: Hero(
                 tag: 'image',
-                child: Image.asset('assets/images/welcome_image.png')),
+                child: Image.asset('assets/images/mage.png')),
           ),
           Expanded(
             child: Column(

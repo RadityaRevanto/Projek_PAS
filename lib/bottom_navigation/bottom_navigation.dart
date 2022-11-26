@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:projek_pas/HomePage/home_page.dart';
 import 'package:projek_pas/Keranjang/keranjang_screen.dart';
+import 'package:projek_pas/ProfilPage/profile_page.dart';
 
 
 class MaterialYou extends StatefulWidget {
@@ -18,7 +19,7 @@ class _MaterialYouState extends State<MaterialYou> {
     HomePage(),
     /*MainCart(),*/
     Center(child: Text('Profile'),),
-    Center(child: Text('Profile'),),
+    ProfilPage()
   ];
   @override
   Widget build(BuildContext context) => Scaffold(
