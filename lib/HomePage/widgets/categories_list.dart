@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/View%20All/ViewAll.dart';
 
 
 
@@ -19,11 +20,11 @@ class CategoriesList extends StatelessWidget{
             ),),
           GestureDetector(
             onTap: () {
-              //Navigator.push(context, MaterialPageRoute(
-               // builder: (context) {
-                //  return  ViewAll();
-               // },
-              //));
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                 return  CookiePage();
+               },
+              ));
             },
             child: Row(
               children: [

@@ -126,7 +126,10 @@ class CartScreen extends StatelessWidget {
                             width: 185,
                             child: DefaultButton(
                               text: "Check Out",
-                              press: () {},
+                              press: () {
+                                //Navigator.of(context).push(
+                                 //   MaterialPageRoute(builder: (context) =>  CheckOut()));
+                              },
                             ),
                           ),
                         ],

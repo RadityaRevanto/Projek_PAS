@@ -69,10 +69,10 @@ class BestSell extends StatelessWidget {
                         color: Colors.white.withOpacity(0.9),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        Icons.favorite_border_outlined,
-                        size: 18,
-                      ),
+                      child:
+               Icon(Icons.favorite, size: 30,
+               color: Colors.red,
+               ),
                     ),
                   )
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:projek_pas/HomePage/home_page.dart';
 import 'package:projek_pas/Keranjang/keranjang_screen.dart';
 
@@ -15,7 +16,8 @@ class _MaterialYouState extends State<MaterialYou> {
   int index = 0;
   final screens = [
     HomePage(),
-    Center(child: Text('Favorite'),),
+    /*MainCart(),*/
+    Center(child: Text('Profile'),),
     Center(child: Text('Profile'),),
   ];
   @override
