@@ -45,6 +45,7 @@ dependencies:
   path_provider: ^2.0.11
   sqflite:
   http:
+  google_fonts:
 
 
 dev_dependencies:

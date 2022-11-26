@@ -17,7 +17,7 @@ class _LandingState extends State<Landing> {
         title: "Secure Payment",
         description:
         "We guarantee the security of all transactions",
-        image: "assets/images/secure-payment.png"),
+        image: "assets/images/secure.png"),
     SliderPage(
         title: "Shipment With Express",
         description:
