@@ -75,8 +75,8 @@ class SearchInput extends StatelessWidget{
                       label: "Rumah Tangga"),
                   MenuButton("assets/icons/keuangan.png",
                       label: "Keuangan"),
-                  MenuButton("assets/icons/travel.png",
-                      label: "Travel & Entertainment"),
+                  /*MenuButton("assets/icons/travel.png",
+                      label: "Travel & Entertainment"),*/
                   MenuButton("assets/icons/elektronik.png",
                       label: "Elektronik"),
                   MenuButton(

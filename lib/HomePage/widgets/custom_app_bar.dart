@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:projek_pas/Keranjang/keranjang_screen.dart';
 
 
 class CustomAppBar extends StatelessWidget{
@@ -61,8 +62,8 @@ child: Column(
                 IconButton(
                   icon: SvgPicture.asset("assets/icons/Cart Icon.svg",),
                   onPressed: (){
-                    //  Navigator.of(context).push(
-                    //    MaterialPageRoute(builder: (context) =>  CartScreen()));
+                      Navigator.of(context).push(
+                       MaterialPageRoute(builder: (context) =>  CartScreen()));
                   },
                 ),
               ),
