@@ -99,42 +99,42 @@ class CookiePage extends StatelessWidget {
 
   Widget _buildCard(String name, String price, String imgPath, String desk, bool added,
       bool isFavorite, context) {
- return  Container(
-   padding: EdgeInsets.only(left: 15, right: 15, top: 10),
-   margin: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-   decoration: BoxDecoration(
-     boxShadow: [
-       BoxShadow(
-           color: Colors.grey.withOpacity(0.2),
-           spreadRadius: 3.0,
-           blurRadius: 5.0)
-     ],
+    return  Container(
+      padding: EdgeInsets.only(left: 15, right: 15, top: 10),
+      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 1),
+      decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+              color: Colors.grey.withOpacity(0.2),
+              spreadRadius: 3.0,
+              blurRadius: 5.0)
+        ],
 
-     color: Colors.white,
-     borderRadius: BorderRadius.circular(20),
-   ),
-   child: Column(
-     children: [
-       Row(
-         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-         children: [
-           Container(
-             padding: EdgeInsets.all(5),
-             decoration: BoxDecoration(
-                 color: Color(0xFF4C53A5),
-                 borderRadius: BorderRadius.circular(20)
-             ),
-             child: Text(
-               "-50%",
-               style: TextStyle(
-                 fontSize: 14,
-                 color: Colors.white,
-                 fontWeight: FontWeight.bold,
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.all(5),
+                decoration: BoxDecoration(
+                    color: Color(0xFF4C53A5),
+                    borderRadius: BorderRadius.circular(20)
+                ),
+                child: Text(
+                  "-50%",
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
 
-               ),
-             ),
-           ),
-         /* IconButton(
+                  ),
+                ),
+              ),
+              /* IconButton(
               icon: Icon(Icons.favorite, size: 30),
               color:
               checkExist ? Colors.red : colorChecked,
@@ -142,56 +142,56 @@ class CookiePage extends StatelessWidget {
                checkExist ? deleteData() : addData();
                }
            ),*/
-         ],
-       ),
-       SizedBox(height: 10,),
-       InkWell(
-         onTap: () {},
-         child: Image.asset(imgPath,
-           height: 100,
-           width: 100,
-         ),
-       ),
-       SizedBox(height: 10,)
-       ,              Container(
-         padding: EdgeInsets.only(bottom: 8),
-         alignment: Alignment.centerLeft,
-         child: Text(name,
-           style: TextStyle(
-             fontSize: 18,
-             color: Color(0xFF4C53A5),
-             fontWeight: FontWeight.bold,
-           ),),
-       ),
-       Container(
-         alignment: Alignment.centerLeft,
-         child: Text(desk,
-           style: TextStyle(
-             fontSize: 15,
-             color: Color(0xFF4C53A5),
-           ),
-         ),
-       ),
-       Padding(padding: EdgeInsets.symmetric(vertical: 10),
-         child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children: [
-             Text(price,
-               style: TextStyle(
-                 fontSize: 16,
-                 fontWeight: FontWeight.bold,
-                 color: Color(0xFF4C53A5),
-               ),
-             ),
-             Icon(
-               Icons.shopping_cart_outlined,
-               color: Color(0xFF4C53A5),
-             )
-           ],
-         ),
-       )
-     ],
-   ),
- );
+            ],
+          ),
+          SizedBox(height: 10,),
+          InkWell(
+            onTap: () {},
+            child: Image.asset(imgPath,
+              height: 100,
+              width: 100,
+            ),
+          ),
+          SizedBox(height: 10,)
+          ,              Container(
+            padding: EdgeInsets.only(bottom: 8),
+            alignment: Alignment.centerLeft,
+            child: Text(name,
+              style: TextStyle(
+                fontSize: 18,
+                color: Color(0xFF4C53A5),
+                fontWeight: FontWeight.bold,
+              ),),
+          ),
+          Container(
+            alignment: Alignment.centerLeft,
+            child: Text(desk,
+              style: TextStyle(
+                fontSize: 15,
+                color: Color(0xFF4C53A5),
+              ),
+            ),
+          ),
+          Padding(padding: EdgeInsets.symmetric(vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(price,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF4C53A5),
+                  ),
+                ),
+                Icon(
+                  Icons.shopping_cart_outlined,
+                  color: Color(0xFF4C53A5),
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
