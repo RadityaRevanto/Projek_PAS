@@ -1,73 +1,92 @@
 import 'package:flutter/material.dart';
-import 'package:projek_pas/Keranjang/keranjang_screen.dart';
+
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class CustomAppBar extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Container(
-      padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top,
-          left: 25,right: 25),
+    return SafeArea(
+        child: SingleChildScrollView(
+child: Column(
+  children: [
+    SizedBox(height: 20,),
+    Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
+          Container(
+            //height: 50,
+            width: 200,
+            decoration: BoxDecoration(
+              color: Color(0xFF979797).withOpacity(0.1),
+              borderRadius: BorderRadius.circular(15),
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                hintText: "Search Product",
+                prefixIcon: Icon(Icons.search),
+                contentPadding: EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 15,
+                )
+              ),
+
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+                color: Color(0xFF979797).withOpacity(0.1),
+                shape: BoxShape.circle
+            ),
+            child: SvgPicture.asset("assets/icons/Bell.svg"),
+          ),
+          Stack(
             children: [
-              RichText(text: const TextSpan(
-                  children: [
-                    TextSpan(
-                      text: 'Berbagai Helm Keren dan Kece\nBerstandar SNI',
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    TextSpan(
-                      text: '👀',
-                      style: TextStyle(
-                        fontSize: 22,
-                      ),
-                    )
-                  ]
-              ))
+              Container(
+                padding: EdgeInsets.all(10),
+                height: 50,
+                width: 50,
+                decoration: BoxDecoration(
+                  color: Color(0xFF979797).withOpacity(0.1),
+                  shape: BoxShape.circle
+                ),
+                child:
+                IconButton(
+                  icon: SvgPicture.asset("assets/icons/Cart Icon.svg",),
+                  onPressed: (){
+                    //  Navigator.of(context).push(
+                    //    MaterialPageRoute(builder: (context) =>  CartScreen()));
+                  },
+                ),
+              ),
+              Positioned(
+                top: -3,
+                right: 0,
+                child: Container(
+                  height: 15,
+                width: 15,
+                  decoration: BoxDecoration(
+                    color: Color(0xFFFF4848),
+                    shape: BoxShape.circle,
+                    border: Border.all(width: 1.5, color: Colors.white)
+                  ),
+                ),
+              )
             ],
           ),
-          Stack(children: [
-            Container(
-              padding: EdgeInsets.all(5),
-              decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 0.1,
-                        blurRadius: 0.1,
-                        offset: Offset(0, 1)
-                    )
-                  ]
-              ),
-              child: IconButton(icon: Icon(Icons.shopping_cart_outlined,color: Colors.grey, ),
-                onPressed: () {
-                 Navigator.of(context).push(
-                   MaterialPageRoute(builder: (context) =>  CartScreen()));
-                },),
-            ),
-            Positioned(
-                right: 10,
-                top: 10,
-                child: Container(
-                  width: 10,
-                  height: 10,
-                  decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      shape: BoxShape.circle
-                  ),
-                )),
-          ],)
         ],
       ),
+    )
+  ],
+),
+        ),
     );
   }
 }
