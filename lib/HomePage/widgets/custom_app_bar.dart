@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_svg/flutter_svg.dart';
 
 
@@ -33,6 +34,7 @@ child: Column(
                   vertical: 15,
                 )
               ),
+
             ),
           ),
           Container(

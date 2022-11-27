@@ -10,17 +10,19 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: ListView(
           children: [
-            CustomAppBar(),
-            SearchInput(),
-            NewArivval(),
-            NewArivval2(),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomAppBar(),
+                SearchInput(),
+                NewArivval(),
+                NewArivval2(),
+              ],
+            ),
           ],
         ),
-      ),
     );
   }
 }

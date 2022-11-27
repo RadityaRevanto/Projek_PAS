@@ -1,10 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Database/FavDatabase.dart';
+import 'package:projek_pas/Database/FavoriteModel.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
 
-class BestSell extends StatelessWidget {
+class BestSell extends StatefulWidget {
   final Helm helm;
   BestSell(this.helm);
 
+  @override
+  State<BestSell> createState() => _BestSellState();
+}
+
+class _BestSellState extends State<BestSell> {
+  bool checkExist = false;
+  Color colorChecked = Colors.grey;
+
+  Future read() async {
+    checkExist = await CartDB.instance.read(widget.helm.title);
+    setState(() {});
+  }
+  Future addData() async {
+    CartModel fav;
+    fav = CartModel(
+        image: widget.helm.imageURL.toString(),
+        name: widget.helm.title.toString(),
+        price: widget.helm.price.toString(),
+        rate: widget.helm.subtitle.toString());
+    await CartDB.instance.create(fav);
+    setState(() {
+      checkExist = true;
+    });
+    // Navigator.pop(context);
+  }
+  Future deleteData() async {
+    await CartDB.instance.delete(widget.helm.title);
+    setState(() {
+      checkExist = false;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +61,7 @@ class BestSell extends StatelessWidget {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15),
                           child: Image.asset(
-                            helm.imageURL,
+                            widget.helm.imageURL,
                             width: 70,
                           ),
                         ),
@@ -39,17 +72,17 @@ class BestSell extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              helm.title,
+                              widget.helm.title,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, height: 1.5),
                             ),
                             Text(
-                              helm.subtitle,
+                              widget.helm.subtitle,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, height: 1.5),
                             ),
                             Text(
-                              helm.price,
+                              widget.helm.price,
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   height: 1.5,
@@ -69,10 +102,14 @@ class BestSell extends StatelessWidget {
                         color: Colors.white.withOpacity(0.9),
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        Icons.favorite_border_outlined,
-                        size: 18,
-                      ),
+                      child:
+                      IconButton(
+                          icon: Icon(Icons.favorite, size: 20),
+                          color:
+                          checkExist ? Colors.red : colorChecked,
+                          onPressed: () {
+                            checkExist ? deleteData() : addData();
+                          }),
                     ),
                   )
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/DetailPage/detail_page.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
 
 class ClothesItem extends StatelessWidget{
@@ -10,10 +11,10 @@ class ClothesItem extends StatelessWidget{
     return Container(
       child:GestureDetector(
         onTap: (){
-         // Navigator.of(context).push(
-           //   MaterialPageRoute(
-             //     builder: (context) => Detail(clothes))
-          //);
+         Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: (context) => Detail(clothes))
+          );
         },
         child: Card(
           shape: RoundedRectangleBorder(
