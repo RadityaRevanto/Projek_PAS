@@ -13,10 +13,7 @@ class CategoriesList extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(title,
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22
-            ),),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
           GestureDetector(
             onTap: () {
               //Navigator.push(context, MaterialPageRoute(
@@ -31,7 +28,7 @@ class CategoriesList extends StatelessWidget{
                   style: TextStyle(
                       color: Theme.of(context).primaryColor,
                       fontWeight: FontWeight.bold,
-                      fontSize: 18
+                      fontSize: 15
                   ),),
                 SizedBox(width: 10,),
                 Container(
