@@ -34,10 +34,7 @@ class Detail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<String> images = [
-      "assets/images/helmig.jpg",
-      "assets/images/helmig.jpg",
-      "assets/images/helmig.jpg",
-      "assets/images/helmig.jpg",
+      clothes.imageURL,
     ];
     return Scaffold(
       body: SafeArea(
