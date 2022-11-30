@@ -51,53 +51,30 @@ class Helm{
   String subtitle;
   String price;
   String imageURL;
-  List<String> detailUrl;
 
-  Helm(this.title, this.subtitle, this.price, this.imageURL, this.detailUrl);
+  Helm(this.title, this.subtitle, this.price, this.imageURL);
   static List<Helm> generateHelm(){
     return [
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Helmet Shark ',
+          'Helm Full Face',
           '\$79.99',
-          'assets/images/helmig.jpg',
-          ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
+          'assets/images/helmig.jpg'),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'XR2 Nexx ',
+          'Helm Full Face',
           '\$79.99',
-          'assets/images/agvcarbon.png',
-          ['assets/images/agvcarbon.png', 'assets/images/agvcarbon.png']),
+          'assets/images/agvcarbon.png'),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Locatelli Pro',
+          'Helm Full Face',
           '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'assets/images/helmig2.jpg'),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Snail ',
+          'Helm Full Face',
           '\$79.99',
-          'assets/images/kyt1.png',
-          [ 'assets/images/kyt1.png',  'assets/images/kyt1.png']),
-      Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/hjc.png',
-          ['assets/images/hjc.png', 'assets/images/hjc.png']),
-      Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
-      Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'assets/images/kyt1.png'),
     ];
   }
 }
