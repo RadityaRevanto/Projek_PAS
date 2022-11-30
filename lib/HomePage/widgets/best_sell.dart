@@ -38,6 +38,14 @@ class _BestSellState extends State<BestSell> {
       checkExist = false;
     });
   }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    read();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
