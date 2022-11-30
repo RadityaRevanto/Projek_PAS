@@ -1,11 +1,51 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pas/Database/FavDatabase.dart';
+import 'package:projek_pas/Database/FavoriteModel.dart';
 import 'package:projek_pas/DetailPage/detail_page.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
 
-class ClothesItem extends StatelessWidget{
+class ClothesItem extends StatefulWidget{
   final Clothes clothes;
   ClothesItem(this.clothes);
 
+  @override
+  State<ClothesItem> createState() => _ClothesItemState();
+}
+
+
+class _ClothesItemState extends State<ClothesItem> {
+  bool checkExist = false;
+  Color colorChecked = Colors.grey;
+
+  Future read() async {
+    checkExist = await CartDB.instance.read(widget.clothes.title);
+    setState(() {});
+  }
+  Future addData() async {
+    CartModel fav;
+    fav = CartModel(
+        image: widget.clothes.imageURL.toString(),
+        name: widget.clothes.title.toString(),
+        price: widget.clothes.price.toString(),
+        rate: widget.clothes.subtitle.toString());
+    await CartDB.instance.create(fav);
+    setState(() {
+      checkExist = true;
+    });
+    // Navigator.pop(context);
+  }
+  Future deleteData() async {
+    await CartDB.instance.delete(widget.clothes.title);
+    setState(() {
+      checkExist = false;
+    });
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    read();
+  }
   @override
   Widget build(BuildContext context){
     return Container(
@@ -13,7 +53,7 @@ class ClothesItem extends StatelessWidget{
         onTap: (){
          Navigator.of(context).push(
               MaterialPageRoute(
-                  builder: (context) => Detail(clothes))
+                  builder: (context) => Detail(widget.clothes))
           );
         },
         child: Card(
@@ -32,35 +72,36 @@ class ClothesItem extends StatelessWidget{
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
                       image: DecorationImage(
-                          image: AssetImage(clothes.imageURL),
+                          image: AssetImage(widget.clothes.imageURL),
                           fit: BoxFit.fitHeight),
                     ),
                   ),
                   Positioned(
-                      right: 20,
+                      right: 15,
                       top: 15,
                       child: Container(
-                        padding: EdgeInsets.all(8),
-                        decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.9),
-                            shape: BoxShape.circle
-                        ),
-                        child: Icon(Icons.favorite,
-                          color: Colors.red,
-                          size:  15,),))
+                        child:  IconButton(
+                            icon: Icon(Icons.favorite, size: 30),
+                            color:
+                            checkExist ? Colors.red : colorChecked,
+                            onPressed: () {
+                              checkExist ? deleteData() : addData();
+                            }),
+
+                      ))
                 ],
               ),
-              Text(clothes.title,
+              Text(widget.clothes.title,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     height: 1.5
                 ),),
-              Text(clothes.subtitle,
+              Text(widget.clothes.subtitle,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     height: 1.5
                 ),),
-              Text( '\$${clothes.price}',
+              Text( '\$${widget.clothes.price}',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   height: 1.5,

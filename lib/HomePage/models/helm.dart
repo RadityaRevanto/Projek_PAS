@@ -13,11 +13,11 @@ class Clothes {
   static List <Clothes> generateClothes() {
     return [
       Clothes(
-          'Helmet Shark ',
-          'Helm Full Face',
-          32.30,
-          'assets/images/helmig.jpg',
-          ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
+          'Ladies Bag ',
+          'Bag',
+          10.00,
+          'assets/images/Ladies Bag.png',
+          ['assets/images/Ladies Bag.png', 'assets/images/Ladies Bag.png']),
       Clothes(
           'XR2 Nexx ',
           'Helm Full Face',
@@ -25,17 +25,17 @@ class Clothes {
           'assets/images/simpson.png',
           [ 'assets/images/simpson.png',  'assets/images/simpson.png',]),
       Clothes(
-          'Locatelli Pro',
-          'Helm  Full Face',
-          39.99,
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'Warm Jacket',
+          'Jacket',
+          19.99,
+          'assets/images/Warm Jacket.png',
+          ['assets/images/Warm Jacket.png', 'assets/images/Warm Jacket.png']),
       Clothes(
-          'XR2 Nexx ',
-          'Helm Full Face',
-          39.99,
-          'assets/images/agv.jpg',
-          ['assets/images/agv.jpg', 'assets/images/agv.jpg']),
+          'Skincare V2',
+          'Skincare',
+          29.99,
+          'assets/images/skincare.jpg',
+          ['assets/images/skincare.jpg', 'assets/images/skincare.jpg']),
       Clothes(
           'XR2 Nexx ',
           'Helm Full Face',
@@ -57,23 +57,23 @@ class Helm{
   static List<Helm> generateHelm(){
     return [
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/helmig.jpg',
-          ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
+          'Swallow',
+          'Sandal Swallow',
+          '\$10.99',
+          'assets/images/Swallow.jpg',
+          ['assets/images/Swallow.jpg', 'assets/images/Swallow.jpg']),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Sneaker Gold',
+          'Sepatu',
           '\$79.99',
-          'assets/images/agvcarbon.png',
-          ['assets/images/agvcarbon.png', 'assets/images/agvcarbon.png']),
+          'assets/images/Sneaker Gold.jpg',
+          ['assets/images/Sneaker Gold.jpg', 'assets/images/Sneaker Gold.jpg']),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'Tas Gucci',
+          'Tas',
+          '\$109.99',
+          'assets/images/Gucci.jpeg',
+          ['assets/images/Gucci.jpeg', 'assets/images/Gucci.jpeg']),
       Helm(
           'Helmet Shark Full Face',
           'Helm',
@@ -81,23 +81,17 @@ class Helm{
           'assets/images/kyt1.png',
           [ 'assets/images/kyt1.png',  'assets/images/kyt1.png']),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Legion',
+          'Laptop',
           '\$79.99',
-          'assets/images/hjc.png',
-          ['assets/images/hjc.png', 'assets/images/hjc.png']),
+          'assets/images/legion.png',
+          ['assets/images/legion.png', 'assets/images/legion.png']),
       Helm(
-          'Helmet Shark Full Face',
-          'Helm',
+          'Realme C15',
+          'Handphone',
           '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
-      Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'assets/images/C15.png',
+          ['assets/images/C15.png', 'assets/images/C15.png']),
     ];
   }
 }

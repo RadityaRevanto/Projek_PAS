@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:projek_pas/Database/FavDatabase.dart';
 import 'package:projek_pas/Database/FavoriteModel.dart';
+import 'package:projek_pas/DetailPage/detail_page2.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
+import 'package:projek_pas/HomePage/widgets/best_sell.dart';
+import 'package:projek_pas/View%20All/ViewAll.dart';
 
 class BestSell extends StatefulWidget {
   final Helm helm;
@@ -39,6 +42,12 @@ class _BestSellState extends State<BestSell> {
     });
   }
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    read();
+  }
+  @override
   Widget build(BuildContext context) {
     return Container(
       child: Column(
@@ -49,8 +58,11 @@ class _BestSellState extends State<BestSell> {
             shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             child: GestureDetector(
-              onTap: () {
-
+              onTap: (){
+                Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => Detail2(widget.helm))
+                );
               },
               child: Stack(
                 children: [
