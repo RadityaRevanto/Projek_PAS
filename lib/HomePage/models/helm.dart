@@ -51,47 +51,11 @@ class Helm{
   String subtitle;
   String price;
   String imageURL;
-  List<String> detailUrl;
 
-  Helm(this.title, this.subtitle, this.price, this.imageURL, this.detailUrl);
+  Helm(this.title, this.subtitle, this.price, this.imageURL);
   static List<Helm> generateHelm(){
     return [
-      Helm(
-          'Swallow',
-          'Sandal Swallow',
-          '\$10.99',
-          'assets/images/Swallow.jpg',
-          ['assets/images/Swallow.jpg', 'assets/images/Swallow.jpg']),
-      Helm(
-          'Sneaker Gold',
-          'Sepatu',
-          '\$79.99',
-          'assets/images/Sneaker Gold.jpg',
-          ['assets/images/Sneaker Gold.jpg', 'assets/images/Sneaker Gold.jpg']),
-      Helm(
-          'Tas Gucci',
-          'Tas',
-          '\$109.99',
-          'assets/images/Gucci.jpeg',
-          ['assets/images/Gucci.jpeg', 'assets/images/Gucci.jpeg']),
-      Helm(
-          'Helmet Shark Full Face',
-          'Helm',
-          '\$79.99',
-          'assets/images/kyt1.png',
-          [ 'assets/images/kyt1.png',  'assets/images/kyt1.png']),
-      Helm(
-          'Legion',
-          'Laptop',
-          '\$79.99',
-          'assets/images/legion.png',
-          ['assets/images/legion.png', 'assets/images/legion.png']),
-      Helm(
-          'Realme C15',
-          'Handphone',
-          '\$79.99',
-          'assets/images/C15.png',
-          ['assets/images/C15.png', 'assets/images/C15.png']),
+   
     ];
   }
 }

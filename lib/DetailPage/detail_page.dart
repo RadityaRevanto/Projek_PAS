@@ -34,6 +34,11 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    List<String> images = [
+      clothes.imageURL,
+    ];
+
     return Scaffold(
       body: SafeArea(
         child: Column(
