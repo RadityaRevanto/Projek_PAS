@@ -6,7 +6,6 @@ import 'package:projek_pas/Keranjang/keranjang_screen.dart';
 import 'package:projek_pas/bloc/cart_bloc.dart';
 import 'package:projek_pas/bottom_navigation/bottom_navigation.dart';
 
-
 class Detail extends StatelessWidget {
   final Clothes clothes;
   Detail(this.clothes);
@@ -34,7 +33,6 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     List<String> images = [
       clothes.imageURL,
     ];
@@ -76,8 +74,8 @@ class Detail extends StatelessWidget {
                       ),
                       IconButton(
                         onPressed: () {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) =>  CartScreen()));
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => CartScreen()));
                         },
                         icon: CircleAvatar(
                           backgroundColor: Colors.white,
@@ -95,7 +93,7 @@ class Detail extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding:
-                const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -121,14 +119,18 @@ class Detail extends StatelessWidget {
                         )
                       ],
                     ),
-                    SizedBox(height: 5,),
+                    SizedBox(
+                      height: 5,
+                    ),
                     Text(
                       clothes.subtitle,
                       style: TextStyle(
                         color: Color(0xff979797),
                       ),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -140,7 +142,9 @@ class Detail extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -166,7 +170,9 @@ class Detail extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(
+                      height: 10,
+                    ),
                     Row(
                       children: [
                         Column(
@@ -176,8 +182,8 @@ class Detail extends StatelessWidget {
                             Container(
                               width: 50,
                               child: Divider(
-                                  thickness: 3,
-                                  color: Color.fromARGB(210, 28, 78, 159),
+                                thickness: 3,
+                                color: Color.fromARGB(210, 28, 78, 159),
                               ),
                             )
                           ],
@@ -280,4 +286,3 @@ class Detail extends StatelessWidget {
     );
   }
 }
-
