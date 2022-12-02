@@ -33,10 +33,6 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-=======
-
->>>>>>> eaffbf522ab1543c210b24e54a44b8370406f874
     List<String> images = [
       clothes.imageURL,
     ];
