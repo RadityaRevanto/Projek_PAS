@@ -1,5 +1,5 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:projek_pas/HomePage/models/helm.dart';
 import 'package:projek_pas/Keranjang/keranjang_screen.dart';
@@ -7,9 +7,9 @@ import 'package:projek_pas/bloc/cart_bloc.dart';
 import 'package:projek_pas/bottom_navigation/bottom_navigation.dart';
 
 
-class Detail extends StatelessWidget {
-  final Clothes clothes;
-  Detail(this.clothes);
+class Detail2 extends StatelessWidget {
+  final Helm helm;
+  Detail2(this.helm);
 
   Widget buildSizeButton({title, isSeleted}) {
     return MaterialButton(
@@ -34,11 +34,6 @@ class Detail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    List<String> images = [
-      clothes.imageURL,
-    ];
-
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -52,7 +47,7 @@ class Detail extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20.0),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage(clothes.imageURL),
+                      image: AssetImage(helm.imageURL),
                     ),
                   ),
                   child: Row(
@@ -104,7 +99,7 @@ class Detail extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          clothes.title,
+                          helm.title,
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
@@ -112,7 +107,7 @@ class Detail extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          '\$${clothes.price}',
+                          '\$${helm.price}',
                           style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.bold,
@@ -123,7 +118,7 @@ class Detail extends StatelessWidget {
                     ),
                     SizedBox(height: 5,),
                     Text(
-                      clothes.subtitle,
+                      helm.subtitle,
                       style: TextStyle(
                         color: Color(0xff979797),
                       ),
@@ -176,8 +171,8 @@ class Detail extends StatelessWidget {
                             Container(
                               width: 50,
                               child: Divider(
-                                  thickness: 3,
-                                  color: Color.fromARGB(210, 28, 78, 159),
+                                thickness: 3,
+                                color: Color.fromARGB(210, 28, 78, 159),
                               ),
                             )
                           ],
@@ -231,12 +226,12 @@ class Detail extends StatelessWidget {
                         builder: (context, state) {
                           return MaterialButton(
                             onPressed: () {
-                              ScaffoldMessenger.of(context).showSnackBar(
+                            /*  ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text('Added to your Cart!'),
                                 ),
                               );
-                              context.read<CartBloc>().add(AddProduct(clothes));
+                              context.read<CartBloc>().add(AddProduct(clothes));*/
                             },
                             height: 66,
                             shape: RoundedRectangleBorder(
@@ -258,7 +253,7 @@ class Detail extends StatelessWidget {
                               padding: EdgeInsets.all(10.0),
                               child: Center(
                                 child: Text(
-                                  "Add to Cart\t\t\t\$${clothes.price}",
+                                  "Add to Cart\t\t\t\$${helm.price}",
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,

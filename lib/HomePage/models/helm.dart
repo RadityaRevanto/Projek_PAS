@@ -13,11 +13,11 @@ class Clothes {
   static List <Clothes> generateClothes() {
     return [
       Clothes(
-          'Helmet Shark ',
-          'Helm Full Face',
-          32.30,
-          'assets/images/helmig.jpg',
-          ['assets/images/helmig.jpg', 'assets/images/helmig.jpg']),
+          'Ladies Bag ',
+          'Bag',
+          10.00,
+          'assets/images/Ladies Bag.png',
+          ['assets/images/Ladies Bag.png', 'assets/images/Ladies Bag.png']),
       Clothes(
           'XR2 Nexx ',
           'Helm Full Face',
@@ -25,17 +25,17 @@ class Clothes {
           'assets/images/simpson.png',
           [ 'assets/images/simpson.png',  'assets/images/simpson.png',]),
       Clothes(
-          'Locatelli Pro',
-          'Helm  Full Face',
-          39.99,
-          'assets/images/helmig2.jpg',
-          ['assets/images/helmig2.jpg', 'assets/images/helmig2.jpg']),
+          'Warm Jacket',
+          'Jacket',
+          19.99,
+          'assets/images/Warm Jacket.png',
+          ['assets/images/Warm Jacket.png', 'assets/images/Warm Jacket.png']),
       Clothes(
-          'XR2 Nexx ',
-          'Helm Full Face',
-          39.99,
-          'assets/images/agv.jpg',
-          ['assets/images/agv.jpg', 'assets/images/agv.jpg']),
+          'Skincare V2',
+          'Skincare',
+          29.99,
+          'assets/images/skincare.jpg',
+          ['assets/images/skincare.jpg', 'assets/images/skincare.jpg']),
       Clothes(
           'XR2 Nexx ',
           'Helm Full Face',
@@ -55,26 +55,7 @@ class Helm{
   Helm(this.title, this.subtitle, this.price, this.imageURL);
   static List<Helm> generateHelm(){
     return [
-      Helm(
-          'Helmet Shark ',
-          'Helm Full Face',
-          '\$79.99',
-          'assets/images/helmig.jpg'),
-      Helm(
-          'XR2 Nexx ',
-          'Helm Full Face',
-          '\$79.99',
-          'assets/images/agvcarbon.png'),
-      Helm(
-          'Locatelli Pro',
-          'Helm Full Face',
-          '\$79.99',
-          'assets/images/helmig2.jpg'),
-      Helm(
-          'Snail ',
-          'Helm Full Face',
-          '\$79.99',
-          'assets/images/kyt1.png'),
+   
     ];
   }
 }
