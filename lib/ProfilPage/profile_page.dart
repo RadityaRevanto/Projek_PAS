@@ -65,6 +65,7 @@ class ProfilPage extends StatelessWidget {
                       fontSize: 14,
                       fontStyle: FontStyle.italic,
                     ),
+                  
                   ),
                   SizedBox(
                     height: 20,
@@ -117,6 +118,7 @@ class ProfilPage extends StatelessWidget {
                     icon: Icons.logout,
                     arrowShown: false,
                   ),
+                  
                 ],
               ),
             ),
