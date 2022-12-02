@@ -21,17 +21,7 @@ class ProfilPage extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     child: Padding(
                       padding: EdgeInsets.all(25),
-                      child: Text(
-                        "My Account",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 20,
                   ),
                   Align(
                     alignment: Alignment.topCenter,
